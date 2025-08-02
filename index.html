@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Classic Bixby Burger in Long Beach – Always Fresh, Always Delicious!"/>
+  <meta property="og:title" content="Classic Bixby Burger"/>
+  <meta property="og:description" content="Mouthwatering burgers, chili fries & specialty dogs in Bixby Knolls."/>
+  <meta property="og:image" content="B484408B-A198-4A90-8226-51DCFB5F6011.jpeg"/>
+  <title>Classic Bixby Burger</title>
+  <link rel="icon" href="B484408B-A198-4A90-8226-51DCFB5F6011.jpeg"/>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Merriweather:ital@1&family=Montserrat:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Montserrat',sans-serif;background:#f4f4f4;color:#111}
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block;height:auto;object-fit:cover;object-position:center}
+    header{background:#c80000;padding:1rem 2rem;position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between}
+    .logo img{height:60px;margin-right:2rem}
+    nav{display:flex;gap:1rem}
+    nav a{font-family:'Lobster',cursive;color:#fff;font-size:1rem;transition:color .3s}
+    nav a:hover,nav a.active{color:#ffd166}
+    .cta{background:#ffd166;color:#c80000;padding:.6rem 1.2rem;border-radius:4px;font-family:'Lobster',cursive;font-size:1rem;animation:pulse 2s infinite}
+    @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+    .hero{position:relative;height:80vh;background:linear-gradient(to bottom,rgba(200,0,0,0.6),rgba(200,0,0,0.1)60%),url('B484408B-A198-4A90-8226-51DCFB5F6011.jpeg')center/cover no-repeat;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;background-attachment:fixed}
+    .hero-content{max-width:700px;padding:0 1rem;opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease}
+    .hero-content.visible{opacity:1;transform:translateY(0)}
+    .hero-content h2{font-family:'Lobster',cursive;font-size:3rem;margin-bottom:1rem;text-shadow:0 2px 4px rgba(0,0,0,0.6)}
+    .hero-content p{font-family:'Merriweather',serif;font-style:italic;font-size:1.25rem;margin-bottom:1.5rem;text-shadow:0 1px 2px rgba(0,0,0,0.6)}
+    .hero-content .btn.primary{background:#ffd166;color:#c80000;padding:.8rem 1.6rem;border-radius:4px;font-weight:600}
+    .hero-content .btn.secondary{background:transparent;border:2px solid #fff;color:#fff;padding:.8rem 1.6rem;border-radius:4px}
+    .wave{width:100%;height:80px;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'><path fill='%23f4f4f4' d='M0,256L1440,96L1440,320L0,320Z'/></svg>")no-repeat bottom/cover}
+    section{padding:1.5rem 2rem;max-width:1000px;margin:0 auto;opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+    section.visible{opacity:1;transform:translateY(0)}
+    section.alt{background:#fff}
+    h3{font-family:'Lobster',cursive;font-size:3.25rem;color:#c80000;text-align:center;margin-bottom:1rem;opacity:0;transform:scale(0.8);transition:opacity .6s ease,transform .6s ease}
+    h3.visible{opacity:1;transform:scale(1)}
+    .menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem}
+    .menu-card{background:#fff;padding:1rem;border:1px solid #ddd;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.1);position:relative;overflow:hidden;min-height:350px}
+    .menu-card img{border-radius:4px;filter:brightness(0.95);width:100%;height:200px}
+    .badge{position:absolute;top:1rem;left:1rem;background:#c80000;color:#fff;padding:.3rem .6rem;font-size:.8rem;font-family:'Montserrat',sans-serif;border-radius:3px;transform:rotate(-10deg)}
+    .price-tag{position:absolute;top:1rem;right:1rem;background:#ffd166;color:#c80000;padding:.4rem .8rem;font-family:'Lobster',cursive;border-radius:4px}
+    .menu-card h4{font-family:'Lobster',cursive;font-size:1.25rem;margin:1rem 0 .5rem;text-align:center}
+    .menu-card p{font-size:1rem;font-weight:500;text-align:center}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center;margin-top:1rem}
+    @media(max-width:768px){.two-col{grid-template-columns:1fr}}
+    .two-col img{border-radius:8px}
+    .text-left p{font-size:1.25rem}
+    .testimonial{background:#fff;padding:2rem;margin:1rem 0;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.1);text-align:center}
+    .testimonial p{font-family:'Merriweather',serif;font-style:italic;font-size:1.1rem}
+    .testimonial cite{display:block;margin-top:1rem;font-weight:600}
+    .newsletter{background:#c80000;color:#fff;padding:2rem;text-align:center;border-radius:8px}
+    .newsletter input{padding:.8rem;width:60%;max-width:300px;border:none;border-radius:4px;margin-right:.5rem}
+    .newsletter button{padding:.8rem 1.2rem;border:none;border-radius:4px;background:#ffd166;color:#c80000;font-family:'Lobster',cursive}
+    section#visit p{text-align:center;font-size:1.1rem}
+    section#visit iframe{border:3px solid #c80000;border-radius:5px;margin:1rem auto;display:block}
+    section#contact p{text-align:center;font-size:1rem}
+    .social-icons{display:flex;justify-content:center;gap:1rem;margin:1rem 0}
+    .social-icons a{font-size:1.5rem;color:#ffd166;transition:color .3s}
+    .social-icons a:hover{color:#fff}
+    footer{background:#111;color:#fff;text-align:center;padding:2rem 1rem}
+    @media(max-width:480px){header{flex-direction:column} .hero-content h2{font-size:2rem}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"><img src="5a17f0a9-5937-4dee-a18f-3d8f6a983a2b.png" alt="Logo"/></div>
+    <nav>
+      <a href="#menu" class="active">Menu</a>
+      <a href="#about">About</a>
+      <a href="#visit">Visit Us</a>
+      <a href="#contact">Contact</a>
+      <a href="#" class="cta">Call Now</a>
+    </nav>
+  </header>
+  <div class="hero">
+    <div class="hero-content" id="hero-content">
+      <h2>Always Fresh, Always Delicious</h2>
+      <p>Handcrafted burgers & chili fries, served with a side of nostalgia.</p>
+      <a href="#menu" class="btn primary">View Menu</a>
+      <a href="#visit" class="btn secondary">Get Directions</a>
+    </div>
+  </div>
+  <div class="wave"></div>
+  <section id="menu" class="visible">
+    <h3 id="menu-heading" class="visible">Menu Highlights</h3>
+    <div class="menu-grid">
+      <div class="menu-card featured">
+        <div class="badge">Chef's Pick</div><span class="price-tag">$13.75</span>
+        <img src="6B9D4F30-F0DB-4973-A3BA-36C01294C4AB.jpeg" alt="Bixby Double Combo" loading="lazy"/>
+        <h4>Bixby Double Combo</h4><p>Double cheeseburger, fries & drink.</p>
+      </div>
+      <div class="menu-card">
+        <span class="price-tag">$8.50</span>
+        <img src="3E261832-624D-42A1-BD1F-483C8B062482.jpeg" alt="Chili Cheese Fries" loading="lazy"/>
+        <h4>Chili Cheese Fries</h4><p>Golden fries smothered in house chili & cheddar.</p>
+      </div>
+      <div class="menu-card">
+        <span class="price-tag">$9.00</span>
+        <img src="B4D00B6C-8EF0-438C-AE3A-E32931F92194.jpeg" alt="Secret Menu" loading="lazy"/>
+        <h4>Secret Menu</h4><p>Ask for The Big Bixby, The Deuce, and the Spruce Goose.</p>
+      </div>
+    </div>
+  </section>
+  <div class="wave"></div>
+  <section id="about" class="alt visible">
+    <h3 id="about-heading" class="visible">About Us</h3>
+    <div class="two-col">
+      <div class="text-left"><p>Founded by Raul Roman, Bixby Classic Burger brings old-school diner charm and fresh ingredients to every plate. We're proud to serve our community with bold flavors and genuine hospitality.</p></div>
+      <img src="9CCFA796-575D-414C-912E-901A9D050594.jpeg" alt="About Image" loading="lazy"/>
+    </div>
+  </section>
+  <div class="wave"></div>
+  <section id="testimonials" class="visible">
+    <h3 class="visible">What Customers Say</h3>
+    <div class="testimonial"><p>“Best burgers in Long Beach!”</p><cite>— A Local</cite></div>
+    <div class="testimonial"><p>“The vibe is amazing and the food is unpredictable.”</p><cite>— Burger Lover</cite></div>
+  </section>
+  <div class="wave"></div>
+  <section id="newsletter" class="newsletter alt visible">
+    <h3 class="visible">Get Bixby Deals</h3><p>Sign up for exclusive offers and news.</p>
+    <input type="email" placeholder="Enter your email"/><button>Subscribe</button>
+  </section>
+  <div class="wave"></div>
+  <section id="visit" class="alt visible">
+    <h3 id="visit-heading" class="visible">Visit Us</h3>
+    <p><strong>4001 Orange Ave, Long Beach, CA 90807</strong><br/>Hours: 10AM–6PM (Closed Sunday)<br/>Phone: <a href="tel:+15622833088">(562) 283‑3088</a></p>
+    <iframe src="https://maps.google.com/maps?q=4001%20Orange%20Ave%2C%20Long%20Beach%2C%20CA%2090807&output=embed" width="100%" height="250" loading="lazy"></iframe>
+  </section>
+  <div class="wave"></div>
+  <section id="contact" class="visible">
+    <h3 class="visible">Contact Us</h3>
+    <p>Email: <a href="mailto:contact@bixbyclassicburger.com">contact@bixbyclassicburger.com</a><br/>Follow us on social:</p>
+    <div class="social-icons"><a href="#">🔵</a><a href="#">📸</a></div>
+  </section>
+  <footer><p>© 2025 Classic Bixby Burger</p></footer>
+  <script>
+    window.addEventListener('scroll',()=>{const hero=document.querySelector('.hero'),y=window.scrollY;hero.style.backgroundPosition=`center calc(50%+${y/5}px)`});
+    const io=new IntersectionObserver((entries)=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:0.1});
+    ['hero-content','menu-heading','about-heading','visit-heading','testimonials','newsletter','visit','contact'].forEach(id=>{const el=document.getElementById(id);if(el)io.observe(el)});
+  </script>
+</body>
+</html>
